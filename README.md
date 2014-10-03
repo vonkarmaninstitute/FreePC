@@ -11,7 +11,7 @@ Login restriction management system.
   - a web server (apache, lighttp, ngynx)
 
 ###Install using pip:
-  - djangorestframework
+  - [djangorestframework][rest]
   - markdown
   - django-filter
   - PyYAML
@@ -26,3 +26,4 @@ Code is under [GNU GPL version 3][license].
 
 [license]:https://github.com/vonkarmaninstitute/FreePC/blob/master/LICENSE
 [dl]:https://github.com/vonkarmaninstitute/FreePC/archive/master.zip
+[rest]:http://www.django-rest-framework.org/
