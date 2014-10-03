@@ -1,0 +1,110 @@
+<!--
+This file is part of FreePC.
+ 
+FreePC is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+FreePC is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with FreePC.  If not, see <http://www.gnu.org/licenses/>.
+-->
+{% load bootstrap3%}
+{% load bootstrap_themes %}
+{% load my_tags %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+{# Load CSS and JavaScript #}
+{% bootstrap_styles theme='cerulean' type='min.css' %}
+{% block style %}
+<style type="text/css">
+
+</style>
+{% endblock %}
+{% bootstrap_javascript %}
+{% block js%}
+<script type="test/javascript">
+
+</script>
+{% endblock%}
+<title>{%block title%}{%endblock%}</title>
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<header class="well">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<a class="navbar-brand">
+						{%block header%}{%endblock%}
+						{%block navbar%}{%endblock%}
+					</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="/">Home</a></li>
+						{% for building in buildings%}
+						<li class="dropdown">
+							<a href="" class="dropdown-toggle" data-toggle="dropdown">{{building.name}}<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								{% for room in building|get_rooms%}
+								<li><a href="{% url "availability" room.name%}">{{room.name}}</a></li>
+								{% endfor %}
+							</ul>
+						</li>
+						{%endfor%}
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/api/">API</a></li>
+						<li><a href="{% url "about" %}">About&nbsp;&nbsp;</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<div class="sidebar " id="sidebar">
+			<div  class="col-lg-2" >
+				{%block side%}{%endblock%}
+			</div>
+		</div>
+		<div class="col-lg-10">
+			<div class="panel">
+				<div class="panel-body">{%block content%}{%endblock%}</div>
+			</div>
+		</div>
+
+		<!-- END ROW -->
+		<footer class="footer" align="center">
+			<div class="row">
+				<div class="col-md-3"> </div>
+				<div class="col-md-6" align="center">
+					<img src="http://scribe.qb50.eu/static/img/vki_dpb.png" height="50"/>
+				</div>
+				<div class="col-md-3"> </div>
+			</div>
+		</footer>
+
+	</div>
+</div>
+
+</body>
+</html>

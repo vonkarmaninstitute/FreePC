@@ -1,0 +1,128 @@
+\hypertarget{classrestriction__system_1_1models_1_1Workstation}{}\section{restriction\+\_\+system.\+models.\+Workstation Class Reference}
+\label{classrestriction__system_1_1models_1_1Workstation}\index{restriction\+\_\+system.\+models.\+Workstation@{restriction\+\_\+system.\+models.\+Workstation}}
+
+
+Model Class for the design of \hyperlink{classrestriction__system_1_1models_1_1Workstation}{Workstation}.  
+
+
+Inheritance diagram for restriction\+\_\+system.\+models.\+Workstation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classrestriction__system_1_1models_1_1Workstation}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classrestriction__system_1_1models_1_1Workstation_ad1e40c07bcaefcc66f464f5c6de9d2f5}{\+\_\+\+\_\+unicode\+\_\+\+\_\+}
+\begin{DoxyCompactList}\small\item\em to\+String method \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_a7e10695b3519a406f1c6f605abd10573}{S\+T\+A\+T\+U\+S}
+\begin{DoxyCompactList}\small\item\em The available status. \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_a9b5e1072fbd2e31a7851949b96c6a049}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_a9b5e1072fbd2e31a7851949b96c6a049}{restriction\+\_\+time} = models.\+Foreign\+Key(\hyperlink{classrestriction__system_1_1models_1_1RestrictionTime}{Restriction\+Time})\label{classrestriction__system_1_1models_1_1Workstation_a9b5e1072fbd2e31a7851949b96c6a049}
+
+\begin{DoxyCompactList}\small\item\em the choosen \hyperlink{classrestriction__system_1_1models_1_1RestrictionTime}{Restriction\+Time} \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_abd7d81ee0e12b1e4841e6f8340703de8}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_abd7d81ee0e12b1e4841e6f8340703de8}{ip} = models.\+I\+P\+Address\+Field(null=False)\label{classrestriction__system_1_1models_1_1Workstation_abd7d81ee0e12b1e4841e6f8340703de8}
+
+\begin{DoxyCompactList}\small\item\em the I\+P address \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_a4d3c812255763cb1052fe2d8452c0358}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_a4d3c812255763cb1052fe2d8452c0358}{hostname} = models.\+Char\+Field(max\+\_\+length=64, null=False, primary\+\_\+key=True)\label{classrestriction__system_1_1models_1_1Workstation_a4d3c812255763cb1052fe2d8452c0358}
+
+\begin{DoxyCompactList}\small\item\em the hostname \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_a0058ec136d9f0fd305a8be854be48981}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_a0058ec136d9f0fd305a8be854be48981}{certificate} = models.\+Text\+Field(null=True, blank=True)\label{classrestriction__system_1_1models_1_1Workstation_a0058ec136d9f0fd305a8be854be48981}
+
+\begin{DoxyCompactList}\small\item\em the certificate \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_aef2eb733d087be3dec44c7f57a5f7afe}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_aef2eb733d087be3dec44c7f57a5f7afe}{status} = models.\+Char\+Field(max\+\_\+length=16, choices=\hyperlink{classrestriction__system_1_1models_1_1Workstation_a7e10695b3519a406f1c6f605abd10573}{S\+T\+A\+T\+U\+S})\label{classrestriction__system_1_1models_1_1Workstation_aef2eb733d087be3dec44c7f57a5f7afe}
+
+\begin{DoxyCompactList}\small\item\em the status \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_a028194999ba2844c707f1fcc2a13a345}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_a028194999ba2844c707f1fcc2a13a345}{last\+\_\+update} = models.\+Date\+Time\+Field(null=True, blank=True)\label{classrestriction__system_1_1models_1_1Workstation_a028194999ba2844c707f1fcc2a13a345}
+
+\begin{DoxyCompactList}\small\item\em the last check of the workstation \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_abbd581a6188e1d98d312e718a9bd7423}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_abbd581a6188e1d98d312e718a9bd7423}{max\+\_\+users\+\_\+ssh} = models.\+Positive\+Small\+Integer\+Field()\label{classrestriction__system_1_1models_1_1Workstation_abbd581a6188e1d98d312e718a9bd7423}
+
+\begin{DoxyCompactList}\small\item\em the maximum ssh users during restriction time \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_abe4ba9864118689be2bc66e2e37f90df}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_abe4ba9864118689be2bc66e2e37f90df}{max\+\_\+users\+\_\+ssh\+\_\+unrestricted} = models.\+Positive\+Small\+Integer\+Field(null=True, blank=True)\label{classrestriction__system_1_1models_1_1Workstation_abe4ba9864118689be2bc66e2e37f90df}
+
+\begin{DoxyCompactList}\small\item\em the maximum ssh users during unrestriction time \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_ade0c4ffd464ed0743170aa3626513206}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_ade0c4ffd464ed0743170aa3626513206}{max\+\_\+users\+\_\+x2go} = models.\+Positive\+Small\+Integer\+Field()\label{classrestriction__system_1_1models_1_1Workstation_ade0c4ffd464ed0743170aa3626513206}
+
+\begin{DoxyCompactList}\small\item\em the maximum x2go users during restriction time \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_aef61f678235afaaff2feada648a2b1ef}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_aef61f678235afaaff2feada648a2b1ef}{max\+\_\+users\+\_\+x2go\+\_\+unrestricted} = models.\+Positive\+Small\+Integer\+Field(null=True, blank=True)\label{classrestriction__system_1_1models_1_1Workstation_aef61f678235afaaff2feada648a2b1ef}
+
+\begin{DoxyCompactList}\small\item\em the maximum x2go users during unrestriction time \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_a29ed30562c8f0598b983ed26af516b49}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_a29ed30562c8f0598b983ed26af516b49}{max\+\_\+hours\+\_\+connection} = models.\+Positive\+Small\+Integer\+Field()\label{classrestriction__system_1_1models_1_1Workstation_a29ed30562c8f0598b983ed26af516b49}
+
+\begin{DoxyCompactList}\small\item\em the maximum connection hours during restriction time \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_a73b8c2dadad98984d744778e93aea8a0}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_a73b8c2dadad98984d744778e93aea8a0}{waiting\+\_\+time\+\_\+before\+\_\+reconnect} = models.\+Positive\+Small\+Integer\+Field()\label{classrestriction__system_1_1models_1_1Workstation_a73b8c2dadad98984d744778e93aea8a0}
+
+\begin{DoxyCompactList}\small\item\em the time you have to wait before reconnection (in hour) \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_a3aa3bd1a9c6fb19851c9c0a357596bf7}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_a3aa3bd1a9c6fb19851c9c0a357596bf7}{interval\+\_\+time\+\_\+not\+\_\+disconnection} = models.\+Positive\+Small\+Integer\+Field()\label{classrestriction__system_1_1models_1_1Workstation_a3aa3bd1a9c6fb19851c9c0a357596bf7}
+
+\begin{DoxyCompactList}\small\item\em the time where you can reconnect after a deconnection (in minute) \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_a42c5ec8b203982f7525b7257acd391d5}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_a42c5ec8b203982f7525b7257acd391d5}{min\+\_\+\+C\+P\+U\+\_\+console\+\_\+user} = models.\+Positive\+Small\+Integer\+Field(null=True, blank=True)\label{classrestriction__system_1_1models_1_1Workstation_a42c5ec8b203982f7525b7257acd391d5}
+
+\begin{DoxyCompactList}\small\item\em the minimum percentage of C\+P\+U ressources allowed to the console users \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_a461e79637737047cda1c64e4c4697cb1}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_a461e79637737047cda1c64e4c4697cb1}{max\+\_\+\+C\+P\+U\+\_\+each\+\_\+non\+\_\+console\+\_\+user} = models.\+Positive\+Small\+Integer\+Field(null=True, blank=True)\label{classrestriction__system_1_1models_1_1Workstation_a461e79637737047cda1c64e4c4697cb1}
+
+\begin{DoxyCompactList}\small\item\em the maximum percentage of C\+P\+U ressources allowed to the non console users \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_a6b293e1d3229b3c967c164359e067645}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_a6b293e1d3229b3c967c164359e067645}{min\+\_\+\+R\+A\+M\+\_\+console\+\_\+user} = models.\+Positive\+Integer\+Field(null=True, blank=True)\label{classrestriction__system_1_1models_1_1Workstation_a6b293e1d3229b3c967c164359e067645}
+
+\begin{DoxyCompactList}\small\item\em the minimum percentage of R\+A\+M ressources allowed to the console users \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_a0e1c82212d212107e0126d962853a7bf}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_a0e1c82212d212107e0126d962853a7bf}{max\+\_\+\+R\+A\+M\+\_\+each\+\_\+non\+\_\+console\+\_\+user} = models.\+Positive\+Integer\+Field(null=True, blank=True)\label{classrestriction__system_1_1models_1_1Workstation_a0e1c82212d212107e0126d962853a7bf}
+
+\begin{DoxyCompactList}\small\item\em the maximum percentage of R\+A\+M ressources allowed to the non console users \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_a74cd3332b7903ebe286c5f5104f723fc}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_a74cd3332b7903ebe286c5f5104f723fc}{connection\+\_\+type} = models.\+Many\+To\+Many\+Field(\hyperlink{classrestriction__system_1_1models_1_1ConnectionType}{Connection\+Type}, through='\hyperlink{classrestriction__system_1_1models_1_1WorkstationConnectionType}{Workstation\+Connection\+Type}')\label{classrestriction__system_1_1models_1_1Workstation_a74cd3332b7903ebe286c5f5104f723fc}
+
+\begin{DoxyCompactList}\small\item\em the allowed connection type for the workstation \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_a951ab2ecfbbac6c2053cdf45d659fabc}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_a951ab2ecfbbac6c2053cdf45d659fabc}{owner} = models.\+Foreign\+Key('auth.\+User', related\+\_\+name='workstations', null=True, blank=True)\label{classrestriction__system_1_1models_1_1Workstation_a951ab2ecfbbac6c2053cdf45d659fabc}
+
+\begin{DoxyCompactList}\small\item\em the owner of the workstation \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_a134aa235932ba254dfb15203cdba4cf5}{}tuple \hyperlink{classrestriction__system_1_1models_1_1Workstation_a134aa235932ba254dfb15203cdba4cf5}{room} = models.\+Foreign\+Key(\hyperlink{classrestriction__system_1_1models_1_1Room}{Room}, null=True, blank=True)\label{classrestriction__system_1_1models_1_1Workstation_a134aa235932ba254dfb15203cdba4cf5}
+
+\begin{DoxyCompactList}\small\item\em the \hyperlink{classrestriction__system_1_1models_1_1Room}{Room} where is the workstation \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Model Class for the design of \hyperlink{classrestriction__system_1_1models_1_1Workstation}{Workstation}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_ad1e40c07bcaefcc66f464f5c6de9d2f5}{}\index{restriction\+\_\+system\+::models\+::\+Workstation@{restriction\+\_\+system\+::models\+::\+Workstation}!\+\_\+\+\_\+unicode\+\_\+\+\_\+@{\+\_\+\+\_\+unicode\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+unicode\+\_\+\+\_\+@{\+\_\+\+\_\+unicode\+\_\+\+\_\+}!restriction\+\_\+system\+::models\+::\+Workstation@{restriction\+\_\+system\+::models\+::\+Workstation}}
+\subsubsection[{\+\_\+\+\_\+unicode\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}def restriction\+\_\+system.\+models.\+Workstation.\+\_\+\+\_\+unicode\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classrestriction__system_1_1models_1_1Workstation_ad1e40c07bcaefcc66f464f5c6de9d2f5}
+
+
+to\+String method 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classrestriction__system_1_1models_1_1Workstation_a7e10695b3519a406f1c6f605abd10573}{}\index{restriction\+\_\+system\+::models\+::\+Workstation@{restriction\+\_\+system\+::models\+::\+Workstation}!S\+T\+A\+T\+U\+S@{S\+T\+A\+T\+U\+S}}
+\index{S\+T\+A\+T\+U\+S@{S\+T\+A\+T\+U\+S}!restriction\+\_\+system\+::models\+::\+Workstation@{restriction\+\_\+system\+::models\+::\+Workstation}}
+\subsubsection[{S\+T\+A\+T\+U\+S}]{\setlength{\rightskip}{0pt plus 5cm}tuple restriction\+\_\+system.\+models.\+Workstation.\+S\+T\+A\+T\+U\+S\hspace{0.3cm}{\ttfamily [static]}}\label{classrestriction__system_1_1models_1_1Workstation_a7e10695b3519a406f1c6f605abd10573}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 = (
+2         (\textcolor{stringliteral}{'online'}, \textcolor{stringliteral}{'Online'}),
+3         (\textcolor{stringliteral}{'offline'}, \textcolor{stringliteral}{'Offline'}),
+4         (\textcolor{stringliteral}{'updating'}, \textcolor{stringliteral}{'Updating'})
+5         )
+\end{DoxyCode}
+
+
+The available status. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+models.\+py\end{DoxyCompactItemize}

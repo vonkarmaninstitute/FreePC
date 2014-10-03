@@ -1,0 +1,69 @@
+\hypertarget{classrestriction__system_1_1models_1_1WorkstationUser}{}\section{restriction\+\_\+system.\+models.\+Workstation\+User Class Reference}
+\label{classrestriction__system_1_1models_1_1WorkstationUser}\index{restriction\+\_\+system.\+models.\+Workstation\+User@{restriction\+\_\+system.\+models.\+Workstation\+User}}
+
+
+Model Class for the design of \hyperlink{classrestriction__system_1_1models_1_1WorkstationUser}{Workstation\+User}.  
+
+
+Inheritance diagram for restriction\+\_\+system.\+models.\+Workstation\+User\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classrestriction__system_1_1models_1_1WorkstationUser}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classrestriction__system_1_1models_1_1WorkstationUser_a3fb66c1003b50dff7a997231940aec37}{\+\_\+\+\_\+unicode\+\_\+\+\_\+}
+\begin{DoxyCompactList}\small\item\em to\+String method \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classrestriction__system_1_1models_1_1WorkstationUser_a1001c88c0ee3f4bedd99f48976a76865}{}tuple \hyperlink{classrestriction__system_1_1models_1_1WorkstationUser_a1001c88c0ee3f4bedd99f48976a76865}{workstation\+\_\+type} = models.\+Foreign\+Key(\hyperlink{classrestriction__system_1_1models_1_1WorkstationConnectionType}{Workstation\+Connection\+Type})\label{classrestriction__system_1_1models_1_1WorkstationUser_a1001c88c0ee3f4bedd99f48976a76865}
+
+\begin{DoxyCompactList}\small\item\em the \hyperlink{classrestriction__system_1_1models_1_1WorkstationConnectionType}{Workstation\+Connection\+Type} \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1WorkstationUser_a805f3e1595a05df73cbd992958621706}{}tuple \hyperlink{classrestriction__system_1_1models_1_1WorkstationUser_a805f3e1595a05df73cbd992958621706}{user} = models.\+Foreign\+Key(\hyperlink{classrestriction__system_1_1models_1_1UserSystem}{User\+System})\label{classrestriction__system_1_1models_1_1WorkstationUser_a805f3e1595a05df73cbd992958621706}
+
+\begin{DoxyCompactList}\small\item\em the connected \hyperlink{classrestriction__system_1_1models_1_1UserSystem}{User\+System} \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1WorkstationUser_a4e79c5169111cb7580d1a3f655024e40}{}tuple \hyperlink{classrestriction__system_1_1models_1_1WorkstationUser_a4e79c5169111cb7580d1a3f655024e40}{logname} = models.\+Char\+Field(max\+\_\+length=128, null=True, blank=True)\label{classrestriction__system_1_1models_1_1WorkstationUser_a4e79c5169111cb7580d1a3f655024e40}
+
+\begin{DoxyCompactList}\small\item\em logname file \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1WorkstationUser_aad66b3166f276d44a57261954a75486d}{}tuple \hyperlink{classrestriction__system_1_1models_1_1WorkstationUser_aad66b3166f276d44a57261954a75486d}{logged} = models.\+Boolean\+Field(default=False)\label{classrestriction__system_1_1models_1_1WorkstationUser_aad66b3166f276d44a57261954a75486d}
+
+\begin{DoxyCompactList}\small\item\em the user is logged \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1WorkstationUser_a87e890688f5ae73b641333d520bf7473}{}tuple \hyperlink{classrestriction__system_1_1models_1_1WorkstationUser_a87e890688f5ae73b641333d520bf7473}{connection\+\_\+start} = models.\+Date\+Time\+Field()\label{classrestriction__system_1_1models_1_1WorkstationUser_a87e890688f5ae73b641333d520bf7473}
+
+\begin{DoxyCompactList}\small\item\em the starting time of the connection \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1WorkstationUser_af087ce77e3edd8f48ade722b279d261b}{}tuple \hyperlink{classrestriction__system_1_1models_1_1WorkstationUser_af087ce77e3edd8f48ade722b279d261b}{connection\+\_\+end} = models.\+Date\+Time\+Field(null=True, blank=True)\label{classrestriction__system_1_1models_1_1WorkstationUser_af087ce77e3edd8f48ade722b279d261b}
+
+\begin{DoxyCompactList}\small\item\em the ending time of the connection \end{DoxyCompactList}\item 
+\hypertarget{classrestriction__system_1_1models_1_1WorkstationUser_a3dbb71b0b34a1da890126247fba5e128}{}tuple \hyperlink{classrestriction__system_1_1models_1_1WorkstationUser_a3dbb71b0b34a1da890126247fba5e128}{reservation\+\_\+link} = models.\+U\+R\+L\+Field(null=True, blank=True)\label{classrestriction__system_1_1models_1_1WorkstationUser_a3dbb71b0b34a1da890126247fba5e128}
+
+\begin{DoxyCompactList}\small\item\em the link of booked reservation \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Model Class for the design of \hyperlink{classrestriction__system_1_1models_1_1WorkstationUser}{Workstation\+User}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classrestriction__system_1_1models_1_1WorkstationUser_a3fb66c1003b50dff7a997231940aec37}{}\index{restriction\+\_\+system\+::models\+::\+Workstation\+User@{restriction\+\_\+system\+::models\+::\+Workstation\+User}!\+\_\+\+\_\+unicode\+\_\+\+\_\+@{\+\_\+\+\_\+unicode\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+unicode\+\_\+\+\_\+@{\+\_\+\+\_\+unicode\+\_\+\+\_\+}!restriction\+\_\+system\+::models\+::\+Workstation\+User@{restriction\+\_\+system\+::models\+::\+Workstation\+User}}
+\subsubsection[{\+\_\+\+\_\+unicode\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}def restriction\+\_\+system.\+models.\+Workstation\+User.\+\_\+\+\_\+unicode\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classrestriction__system_1_1models_1_1WorkstationUser_a3fb66c1003b50dff7a997231940aec37}
+
+
+to\+String method 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+models.\+py\end{DoxyCompactItemize}

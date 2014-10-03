@@ -1,0 +1,35 @@
+{%extends "base.html"%}
+{% load my_tags %}
+{% load bootstrap3 %}
+{%block title%}FreePC{%endblock%}
+{%block header%}
+	FreePC
+{%endblock%}
+{%block navbar%}{%endblock%}
+
+{%block side%}
+<div class="panel panel-default">
+	<div class="panel-body">
+	<h4>List of workstations</h4>
+		<div class="row-fluid" >
+			<ul>
+				{% for workstation in room|get_workstations%}
+				<li>{{workstation.hostname}}</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+{% endblock%}
+{%block content%}
+<h3>Availability for the room {{room}}</h3>
+<div>
+<table style="width:100%" border="1">
+	<tr>
+		<td>1</td>
+		<td></td>
+		<td>2</td>
+	</tr>
+</table>
+</div>
+{%endblock%}
