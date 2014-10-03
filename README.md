@@ -1,7 +1,12 @@
 #FreePC
 Login restriction management system.
 
+##Needs
+In our computer labs, we needed a system that controle the access of the users on the different linux public machines. For example, a user cannot log on more than 1 computer at a time. Or he cannot connect log on the same computer 2 days in a row.
+
 ##What is FreePC?
+FreePC is an open-source software. The server part is developed in Django and support the [REST framework][rest] and the client side is in bash. We are also using the pam.d to send the right information to the server.
+The presentation part is not use because we are using [Zabbix][zx] which was already installed.
 
 ##Requirements
 ###To use FreePC, you need to install:
@@ -15,6 +20,9 @@ Login restriction management system.
   - markdown
   - django-filter
   - PyYAML
+  - django-bootstrap3
+  - django-bootstrap-themes
+  - django-rest-swagger
 
 ##Download
 You can download the zip version [here][dl].
@@ -23,7 +31,10 @@ You can download the zip version [here][dl].
 Code is under [GNU GPL version 3][license].
 
 ##Authors
+  - Raimondo Giammanco
+  - Laurent Spitaels
 
 [license]:https://github.com/vonkarmaninstitute/FreePC/blob/master/LICENSE
 [dl]:https://github.com/vonkarmaninstitute/FreePC/archive/master.zip
 [rest]:http://www.django-rest-framework.org/
+[zx]:http://www.zabbix.com/
