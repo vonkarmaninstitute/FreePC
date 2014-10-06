@@ -1,4 +1,5 @@
 #FreePC
+####The client side script will arrive soon.
 Login restriction management system.
 
 ##Why FreePC?
