@@ -3,10 +3,12 @@ Login restriction management system.
 
 ##Why FreePC?
 In our computer labs, we needed a system that controle the access of the users on the different linux public machines. For example, a user cannot log on more than 1 computer at a time. Or he cannot connect log on the same computer 2 days in a row.
+
 First, we looked for [availability map][am] but it did not fit our needs. So we decided to develop our own solution.
 
 ##What is FreePC?
 FreePC is an open-source software. The server part is developed in Django and support the [REST framework][rest] and the client side is in bash. We are also using the pam.d to send the right information to the server.
+
 The presentation part is not use because we are using [Zabbix][zx] which was already installed.
 
 ##Requirements
