@@ -119,7 +119,7 @@ def clean_workstation_users(request, format=None):
 		now = datetime.today()
 		wuc = WorkstationUser.objects.filter(logged=True)
 		for wu in wuc:
-			if not logged:
+			if not wu.logged:
 				if wu.connection_end:
 					time = now - wu.connection_end
 					if time.total_seconds() > (3600 * 72):
