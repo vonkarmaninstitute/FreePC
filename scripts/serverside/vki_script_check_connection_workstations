@@ -1,0 +1,6 @@
+#!/bin/bash -l
+#set -x
+
+RESPONSE=$(curl -X POST http://freepc.private.vki.eu/check-workstations/.json -u USER:PASSWD --connect-timeout 30)
+
+exit 0

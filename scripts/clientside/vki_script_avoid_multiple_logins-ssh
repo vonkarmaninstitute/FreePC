@@ -1,0 +1,43 @@
+#!/bin/bash -l
+#set -x
+
+[ -f "/etc/nologin" ] && exit 0
+
+[ -z "$TARGET" ] && TARGET=$PAM_USER
+
+[ -n "$(grep ^$TARGET: /etc/passwd)" ] && exit 0
+
+
+HOSTNAME=$(hostname -s)
+CONFIG=/tmp/sshd-avoid-multiple-logins
+[ ! -d "$CONFIG" ] && mkdir $CONFIG
+GLOGF=$CONFIG/log
+date >> $GLOGF
+
+[ -z "$TARGET" ] && echo "Missing target" >> $GLOGF && exit 1
+id $TARGET > /dev/null 2>&1
+[ "$?" != "0" ] && echo "User not existing" >> $GLOGF && exit 1
+
+
+CODE=-1
+MSG=""
+
+RESPONSE=$(curl -X POST http://freepc.private.vki.eu/connect/.json -u USER:PASSWD -d "{\"hostname\": \"$HOSTNAME\", \"connection_type\": \"ssh\", \"username\": \"$PAM_USER\", \"logname\": \"\"}" -H "Content-Type: application/json" --connect-timeout 5 2> /dev/null)
+if [ -n "$RESPONSE" ]; then
+  CODE=$(echo $RESPONSE | /opt/vki/jq ".code")
+  MSG=$(echo $RESPONSE | /opt/vki/jq ".content")
+
+  MSG=$(echo $MSG | tr -d '"')
+else
+  echo "Time out. The authentication server is not responding."
+  echo "Please contact the Computer Center."
+  echo " "
+  exit 1
+fi
+
+if [ "$CODE" -ne "0" ]; then
+ echo -e $MSG
+ echo " "
+ exit 1
+fi
+exit 0
