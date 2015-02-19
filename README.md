@@ -17,7 +17,7 @@ FreePC will only work on operating system using [systemd][].
 ###To use FreePC, you need to install:
   - python (2.7)
   - python-dateutil
-  - django (>=1.6.5)
+  - django (>=1.6.5 and <1.7)
   - a web server (apache, lighttp, nginx)
 
 ###Install using pip:
